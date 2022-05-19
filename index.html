@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>watch store</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+
+    <!--================ Google Font ==================-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--================ BOXICONS ==================-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--================ SWIPER CSS ================-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="scss/app.css" />
+  </head>
+
+  <body>
+    <!--==================== Header ====================-->
+    <div class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <i class="bx bxs-watch nav__logo-icon"></i> i Watch
+        </a>
+
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">首頁</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#new" class="nav__link">新品上市</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#products" class="nav__link">系列商品</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#featured" class="nav__link">熱銷商品</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">聯絡資訊</a>
+            </li>
+          </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+
+        <div class="nav__btns">
+          <div class="nav__login login__btn">
+            <i class="bx bx-user"></i>
+          </div>
+
+          <div class="nav__shop" id="cart-shop">
+            <i class="bx bx-cart-alt"></i>
+          </div>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--===================== Cart =====================-->
+    <div class="cart" id="cart">
+      <i class="bx bx-x cart__close" id="cart-close"></i>
+
+      <h2 class="cart__title-center">購物車清單</h2>
+
+      <div class="cart__container">
+        <article class="cart__card">
+          <div class="cart__box">
+            <img src="img/featured1.png" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__details">
+            <h3 class="cart__title">Jazzmaster</h3>
+            <span class="cart__price">$1250</span>
+
+            <div class="cart__amount">
+              <div class="cart__amount-content">
+                <span class="cart__amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart__amount-number">1</span>
+
+                <span class="cart__amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash cart__amount-trash"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart__card">
+          <div class="cart__box">
+            <img src="img/featured3.png" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__details">
+            <h3 class="cart__title">Rose gold</h3>
+            <span class="cart__price">$1850</span>
+
+            <div class="cart__amount">
+              <div class="cart__amount-content">
+                <span class="cart__amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart__amount-number">1</span>
+
+                <span class="cart__amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash cart__amount-trash"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart__card">
+          <div class="cart__box">
+            <img src="img/new1.png" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__details">
+            <h3 class="cart__title">Longines Rose</h3>
+            <span class="cart__price">$1980</span>
+
+            <div class="cart__amount">
+              <div class="cart__amount-content">
+                <span class="cart__amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart__amount-number">1</span>
+
+                <span class="cart__amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash cart__amount-trash"></i>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="cart__prices">
+        <span class="cart__prices-item">總計</span>
+        <span class="cart__prices-total">$5080</span>
+      </div>
+      <div class="cart__pay">
+        <button class="cart__prices-pay">結帳</button>
+      </div>
+    </div>
+
+    <!--===================== login =====================-->
+    <div class="login__content">
+      <div class="logins__modal">
+        <div class="logins__modal-content">
+          <div class="logins__modal-box">
+            <h3 class="logins__modal-title">LOGIN</h3>
+            <i class="bx bx-x logins__modal-close"></i>
+          </div>
+
+          <ul class="logins__modal-services grid">
+            <li class="logins__modal-service">
+              <i class="bx bx-user-circle logins__modal-icon"></i>
+              <input
+                class="logins__input"
+                type="email"
+                placeholder="Email address"
+                required
+              />
+            </li>
+
+            <li class="logins__modal-service">
+              <i class="bx bx-lock-alt logins__modal-icon"></i>
+              <input
+                class="logins__input"
+                type="password"
+                placeholder="password"
+                minlength="50"
+                required
+              />
+            </li>
+
+            <li class="logins__modal-service logins__modal-check">
+              <input type="checkbox" id="news" name="news" value="newspaper" />
+              <label for="news">Remember Me</label>
+            </li>
+
+            <li class="logins__modal-service">
+              <button class="logins__button">LOGIN</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--==================== Main ====================-->
+    <main class="main">
+      <!--=================== Home =====================-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__img-bg">
+            <img src="img/home-1.png" alt="" class="home__img-1" />
+            <img src="img/home-2.png" alt="" class="home__img-2" />
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title">歷經時代的經典</h1>
+            <p class="home__description">融合匠心工藝 呈現絕美時刻</p>
+
+            <div class="home__btns">
+              <a href="#" class="button button--gray button--small">
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--======================= Story ======================-->
+      <section class="story section container">
+        <div class="story__container grid">
+          <div class="story__data">
+            <h2 class="section__title story__section-title">關於我們</h2>
+
+            <h1 class="story__title">品牌理念</h1>
+
+            <p class="story__description">
+              I WATCH 創立於2020年，以生活為品牌理念，將經典與現代元素相結合。
+              每款都是為了珍藏而設計，在追求創新的時代也同時保留經典，讓手中的腕錶不被時代淘汰，
+              值得擁有的完美腕錶。
+            </p>
+
+            <a href="#" class="button button--small">VIEW MORE</a>
+          </div>
+
+          <div class="story__images">
+            <img src="img/testimonial.png" alt="" class="story__img" />
+            <div class="story__square"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--=================== New Arrivals ===================-->
+      <section class="new section container" id="new">
+        <h2 class="section__title">新品上市</h2>
+
+        <div class="new__container">
+          <div class="swiper new-swiper new__container">
+            <div class="swiper-wrapper">
+              <article class="new__card swiper-slide">
+                <span class="new__tag">New</span>
+
+                <img src="img/new1.png" alt="" class="new__img" />
+
+                <div class="new__data">
+                  <h3 class="new__title">Longines rose</h3>
+                  <span class="new__price">$1980</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__button-icon"></i>
+                  <p>加入購物車</p>
+                </button>
+              </article>
+
+              <article class="new__card swiper-slide">
+                <span class="new__tag">New</span>
+
+                <img src="img/new2.png" alt="" class="new__img" />
+
+                <div class="new__data">
+                  <h3 class="new__title">Jazzmaster</h3>
+                  <span class="new__price">$1680</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__button-icon"></i>
+                  <p>加入購物車</p>
+                </button>
+              </article>
+
+              <article class="new__card swiper-slide">
+                <span class="new__tag">New</span>
+
+                <img src="img/new3.png" alt="" class="new__img" />
+
+                <div class="new__data">
+                  <h3 class="new__title">DreyFuss gold</h3>
+                  <span class="new__price">$1280</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__button-icon"></i>
+                  <p>加入購物車</p>
+                </button>
+              </article>
+
+              <article class="new__card swiper-slide">
+                <span class="new__tag">New</span>
+
+                <img src="img/new4.png" alt="" class="new__img" />
+
+                <div class="new__data">
+                  <h3 class="new__title">Portuguese rose</h3>
+                  <span class="new__price">$1690</span>
+                </div>
+
+                <button class="button new__button">
+                  <i class="bx bx-cart-alt new__button-icon"></i>
+                  <p>加入購物車</p>
+                </button>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--================= Products ===================-->
+      <section class="products section container" id="products">
+        <h2 class="section__title">系列商品</h2>
+
+        <div class="products__containers">
+          <div class="products__tabs">
+            <div
+              class="products__item products__active"
+              data-target="#products_classic"
+            >
+              經典系列
+            </div>
+
+            <div class="products__item" data-target="#products_style">
+              智能系列
+            </div>
+
+            <div class="products__item" data-target="#water_proof">
+              防水系列
+            </div>
+
+            <div class="products__item" data-target="#joint_name">聯名系列</div>
+          </div>
+
+          <div class="products__content">
+            <!--================= 經典系列 ===================-->
+            <div
+              class="products__container grid products__active"
+              data-content
+              id="products_classic"
+            >
+              <article class="products__card">
+                <img src="img/product1.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Spirit rose</h3>
+                <p class="products__model">LX-AR0404G</p>
+                <span class="products__price">$1600</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product2.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Khaki pilot</h3>
+                <p class="products__model">CS-AX0106S</p>
+                <span class="products__price">$1350</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product3.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Jubilee black</h3>
+                <p class="products__model">SL-AK0201W</p>
+                <span class="products__price">$1870</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product4.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Fosil me3</h3>
+                <p class="products__model">CS-AS0305Y</p>
+                <span class="products__price">$1650</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product5.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Duchen</h3>
+                <p class="products__model">CS-AX0208S</p>
+                <span class="products__price">$1250</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+            </div>
+
+            <!--================= 智能系列 ===================-->
+            <div
+              class="products__container grid"
+              data-content
+              id="products_style"
+            >
+              <article class="products__card">
+                <img src="img/product3.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Jubilee black</h3>
+                <p class="products__model">SL-AK0201W</p>
+                <span class="products__price">$1870</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product4.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Fosil me3</h3>
+                <p class="products__model">CS-AS0305Y</p>
+                <span class="products__price">$1650</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product5.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Duchen</h3>
+                <p class="products__model">CS-AX0208S</p>
+                <span class="products__price">$1250</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product1.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Spirit rose</h3>
+                <p class="products__model">LX-AR0404G</p>
+                <span class="products__price">$1600</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product2.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Khaki pilot</h3>
+                <p class="products__model">CS-AX0106S</p>
+                <span class="products__price">$1350</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+            </div>
+
+            <!--================= 防水系列 ===================-->
+            <div class="products__container grid" data-content id="water_proof">
+              <article class="products__card">
+                <img src="img/product4.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Fosil me3</h3>
+                <p class="products__model">CS-AS0305Y</p>
+                <span class="products__price">$1650</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product1.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Spirit rose</h3>
+                <p class="products__model">LX-AR0404G</p>
+                <span class="products__price">$1600</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product2.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Khaki pilot</h3>
+                <p class="products__model">CS-AX0106S</p>
+                <span class="products__price">$1350</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+
+              <article class="products__card">
+                <img src="img/product3.png" alt="" class="products__img" />
+
+                <h3 class="products__title">Jubilee black</h3>
+                <p class="products__model">SL-AK0201W</p>
+                <span class="products__price">$1870</span>
+
+                <button class="products__button">
+                  <i class="bx bx-cart-alt"></i>
+                </button>
+              </article>
+            </div>
+          </div>
+
+          <!--================= 智能系列 ===================-->
+          <div class="products__container grid" data-content id="joint_name">
+            <article class="products__card">
+              <img src="img/product5.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Duchen</h3>
+              <p class="products__model">CS-AX0208S</p>
+              <span class="products__price">$1250</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+
+            <article class="products__card">
+              <img src="img/product3.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Jubilee black</h3>
+              <p class="products__model">SL-AK0201W</p>
+              <span class="products__price">$1870</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+
+            <article class="products__card">
+              <img src="img/product4.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Fosil me3</h3>
+              <p class="products__model">CS-AS0305Y</p>
+              <span class="products__price">$1650</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+
+            <article class="products__card">
+              <img src="img/product1.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Spirit rose</h3>
+              <p class="products__model">LX-AR0404G</p>
+              <span class="products__price">$1600</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+
+            <article class="products__card">
+              <img src="img/product2.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Khaki pilot</h3>
+              <p class="products__model">CS-AX0106S</p>
+              <span class="products__price">$1350</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+
+            <article class="products__card">
+              <img src="img/product4.png" alt="" class="products__img" />
+
+              <h3 class="products__title">Fosil me3</h3>
+              <p class="products__model">CS-AS0305Y</p>
+              <span class="products__price">$1650</span>
+
+              <button class="products__button">
+                <i class="bx bx-cart-alt"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--================= Featured ===================-->
+      <section class="featured section container" id="featured">
+        <h2 class="section__title">熱銷商品</h2>
+
+        <div class="featured__container grid">
+          <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/product1.png" alt="" class="featured__img" />
+            <div class="featured__data">
+              <h3 class="featured__title">Jazzmaster</h3>
+              <p class="featured__model">CS-AX0104S</p>
+              <span class="featured__price">$1050</span>
+            </div>
+
+            <button class="button featured__button">
+              <i class="bx bx-cart-alt featured__button-icon"></i>
+              <p>加入購物車</p>
+            </button>
+          </article>
+
+          <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/product2.png" alt="" class="featured__img" />
+            <div class="featured__data">
+              <h3 class="featured__title">Ingersoll</h3>
+              <p class="featured__model">SL-AK0202W</p>
+              <span class="featured__price">$1250</span>
+            </div>
+
+            <button class="button featured__button">
+              <i class="bx bx-cart-alt featured__button-icon"></i>
+              <p>加入購物車</p>
+            </button>
+          </article>
+
+          <article class="featured__card">
+            <span class="featured__tag">Sale</span>
+
+            <img src="img/product3.png" alt="" class="featured__img" />
+            <div class="featured__data">
+              <h3 class="featured__title">Rose gold</h3>
+              <p class="featured__model">CS-AS0307Y</p>
+              <span class="featured__price">$1680</span>
+            </div>
+
+            <button class="button featured__button">
+              <i class="bx bx-cart-alt featured__button-icon"></i>
+              <p>加入購物車</p>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!--================= NewsLetter =================-->
+      <section class="newsletter section container">
+        <div class="newsletter__bg grid">
+          <div>
+            <h2 class="newsletter__title">訂閱電子報</h2>
+            <p class="newsletter__description">
+              獲得即時的I WATCH消息與各式錶款，獨家限量商品資訊。
+              <!-- <br> Only for single use. -->
+            </p>
+          </div>
+
+          <form action="" class="newsletter__subscribe">
+            <input
+              type="email"
+              class="newsletter__input"
+              placeholder="輸入您的電子郵件"
+            />
+            <button class="button">訂閱</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== Footer ====================-->
+    <section id="footer">
+      <footer class="footer section">
+        <div class="footer__container container grid">
+          <div class="footer__content">
+            <h3 class="footer__title">I WATCH</h3>
+            <p class="footer__deal">Products store</p>
+            <a href="#"
+              ><img src="img/footerstore1.png" alt="" class="footer__store"
+            /></a>
+            <a href="#"
+              ><img src="img/footerstore2.png" alt="" class="footer__store"
+            /></a>
+          </div>
+
+          <div class="footer__content">
+            <h3 class="footer__title">聯絡資訊</h3>
+
+            <ul class="footer__list">
+              <li>
+                <i class="bx bx-store"></i>
+                <p class="footer__deasl">新北市-板橋 中正路135號</p>
+              </li>
+              <li>
+                <i class="bx bx-phone"></i>
+                <p class="footer__deasl">02-1234-5678</p>
+              </li>
+              <li>
+                <i class="bx bx-envelope"></i>
+                <p class="footer__deasl">iwatch@gmail.com</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__content">
+            <h3 class="footer__title">服務資訊</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="" class="footer__link">重要公告</a>
+              </li>
+              <li>
+                <a href="" class="footer__link">客服中心</a>
+              </li>
+              <li>
+                <a href="" class="footer__link">服務條款</a>
+              </li>
+              <li>
+                <a href="" class="footer__link">隱私權保護</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__content">
+            <h3 class="footer__title">社群媒體</h3>
+
+            <ul class="footer__social">
+              <a
+                href="https://www.facebook.com/"
+                class="footer__social-link"
+                target="_blank"
+              >
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                class="footer__social-link"
+                target="_blank"
+              >
+                <i class="bx bxl-instagram-alt"></i>
+              </a>
+              <a
+                href="https://twitter.com/"
+                class="footer__social-link"
+                target="_blank"
+              >
+                <i class="bx bxl-twitter"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/"
+                class="footer__social-link"
+                target="_blank"
+              >
+                <i class="bx bxl-youtube"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <span class="footer__copy">&#169; I WATCH All rigths reserved</span>
+      </footer>
+    </section>
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

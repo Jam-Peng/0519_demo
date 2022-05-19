@@ -1,0 +1,90 @@
+.featured{
+    &__container{
+        row-gap: 2.5rem;
+    }
+
+    &__card{
+        position: relative;
+        text-align: center;
+        background-color: var(--white-color);
+        padding: 1rem 0;
+        border: 1px solid var(--border-color);
+        overflow-y: hidden;
+        transition: .3s;
+
+        // &:hover{
+        //     box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
+        //     padding: 2rem 0 3rem;
+        // }
+
+        // &:hover .featured__button{
+        //     transform: translateY(0);
+        //     opacity: 1;
+        // }
+
+        // &:hover .featured__price{
+        //     margin-bottom: var(--mb-1-5);
+        // }
+    }
+    &__tag{
+        background-color: var(--first-color);
+        padding: .5rem 1rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+        position: absolute;
+        transform: rotate(-90deg);
+        left: -1rem;
+        top: 3rem;
+    }
+
+    &__img{
+        height: 214px;
+        margin-bottom: var(--mb-1);
+    }
+
+    &__title,
+    &__price{
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-bold);
+    }
+
+    &__title{
+        text-transform: uppercase;
+        margin-bottom: var(--mb-0-5);
+    }
+
+    &__price{
+        display: block;
+        color: var(--first-color);
+        // transition: .3s;
+        margin-bottom: var(--mb-0-75);
+    }
+
+    &__button{
+        font-size: var(--small-font-size);
+        // transform: translateY(1rem);
+        // opacity: 0;
+        border-radius: 5px;
+        display: flex;
+        margin: 0 auto;
+        gap: .5rem;
+        background-color: var(--first-color);
+        color: var(--white-color);
+        &:hover{
+            background-color: var(--first-color-alt);
+        }
+    }
+
+    &__button-icon{
+        font-size: 1.25rem;
+    }
+
+    &__model{
+        font-size: var(--normal-font-size);
+        color: var(--text-color);
+        margin-bottom: .3rem;
+    }
+
+}

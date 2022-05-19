@@ -1,0 +1,98 @@
+.products{
+    &__container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    &__card{
+        position: relative;
+        background-color: var(--white-color);
+        padding: 1.25rem 0;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        transition: .3s;
+
+        &:hover{
+            box-shadow: 0 8px 15px hsla(0, 0%, 20%, .1);
+        }
+    }
+
+    &__model{
+        font-size: var(--normal-font-size);
+        color: var(--text-color);
+        margin-bottom: .3rem;
+    }
+
+    &__img{
+        height: 125px;
+        margin-bottom: var(--mb-1);
+    }
+
+    &__title,
+    &__price{
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    &__title{
+        text-transform: uppercase;
+        margin-bottom: /* var(--mb-0-5) */ 0.2rem;
+    }
+
+    &__price{
+        color: var(--first-color);
+    }
+
+    &__button{
+        background-color: var(--first-color);
+        padding: .4rem;
+        color: var(--white-color);
+        font-size: 1rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: .3s;
+        display: inline-flex;
+        &:hover{
+            background-color: var(--first-color-alt);
+           
+        }
+    }
+
+    &__tabs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--mb-0-5);
+        padding: var(--mb-1);
+        margin-bottom: var(--mb-2);   
+    }
+
+    &__item{
+        cursor: pointer;
+        color: var(--first-color);
+        background-color: var(--white-color);
+        border: 1px solid var(--first-color);
+        padding: var(--mb-0-5) var(--mb-1);
+        border-radius: 5px;
+        transition: .4s;
+        text-align: center;
+        &:hover{
+            background-color: var(--first-color);
+            color: var(--white-color);
+        }
+    }
+}
+
+.products [data-content]{ 
+    display: none;
+}
+
+.products__active[data-content]{
+    display: grid;
+}
+
+.products__item.products__active{
+    color: var(--white-color);
+    background-color: var(--first-color);
+    transition: .3s;
+}

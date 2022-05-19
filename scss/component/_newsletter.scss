@@ -1,0 +1,49 @@
+.newsletter{
+    &__bg{
+        background-color: var(--first-color);
+        padding: 3rem 1.5rem;
+        text-align: center;
+        row-gap: 2.5rem;
+        display: inherit;
+    }
+
+    &__title{
+        font-size: var(--h1-font-size);
+        color: var(--white-color);
+        margin-bottom: var(--mb-0-5);
+    }
+
+    &__description{
+        color: rgb(211, 211, 211); 
+        padding: 0 0 var(--mb-1);
+    }
+
+    &__subscribe{
+        display: flex;
+        flex-direction: column;
+        row-gap: .75rem;
+        .button{
+            background-color: hsl(0, 0%, 94%);
+            
+            
+            &:hover{
+                border: 1px solid  var(--white-color);
+                color: var(--white-color);
+                background-color: var(--first-color-alt);
+            }
+        }
+        
+    }
+
+    &__input{
+        border: none;
+        outline: none;
+        background-color: hsl(0, 0%, 94%);
+        padding: 1.25rem 1rem;
+        color: hsl(0, 0%, 15%);
+
+    }
+}
+
+
+
