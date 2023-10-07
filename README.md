@@ -1,10 +1,9 @@
-### Website Design
-[i-watch](https://jam-peng.github.io/i-watch-store_WebDesign/) 
- # I WATCH 手錶電商網站設計 (e-commerce-website)
+ # I WATCH 手錶網站設計 (e-commerce-website)
 >⚠ Demo Website : [https://jam-peng.github.io/i-watch-store_WebDesign/](https://jam-peng.github.io/i-watch-store_WebDesign/)
 
 ## 專案說明
-以手錶電商為主題的網站設計。
+- 以手錶電商為主題的網站設計。
+- 以一頁式的頁面為設計方向。
 
 #
 ### 使用技術
